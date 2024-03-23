@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniServices</title>
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+    <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li class="remove_sidebar" onclick=hideSidebar()><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#products">Our Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Order</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+            <ul>
+                <li><img src="./img/avt1.png" alt=""></li>
+                <li class="hideOnMobile"><a href="#products">Our Services</a></li>
+                <li class="hideOnMobile"><a href="#pricing">Pricing</a></li>
+                <li class="hideOnMobile"><a href="#contact">Order</a></li>
+                <li class="hideOnMobile"><a href="./login.html">Login</a></li>
+                <li class="menu-btn" onclick=showSidebar()><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></svg></a></li>
+            </ul>
+        </nav>
+        <script>
+            const sidebar = document.querySelector(".sidebar");
+            const menuBtn = document.querySelector(".menu-btn");  
+            const remove = document.querySelector(".remove_sidebar");
+            function hideSidebar() {
+                 sidebar.style.display = 'none'
+            }
+            
+            menuBtn.addEventListener("mouseover", function() {
+            sidebar.classList.add("show");
+            });
+
+        </script>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <div class="gallery" id="products">
+            <a href="https://www.facebook.com/" class="item"></a>
+            <a href="https://www.facebook.com/" class="item"></a>
+            <a href="https://www.facebook.com/" class="item"></a>
+        </div>
+
+        <div id="pricing">
+            <div> Gói Thử Nghiệm</div>
+            <div> Phiên bản trả phí</div>
+        </div>
+
+
+        <section id="contact">
+            <div class="sectionheader">	<h1>CONTACT US</h1></div>
+            <article>
+            <p id="text">Yoda soon you will call me master Governor Tarkin. A new hope Boba Fett bantha forest moon. Tusken raider Master Yoda do or do not never tell me the odds.</p>
+                
+                    <label for="checkcontact" class="contactbutton"><div class="mail"></div></label><input id="checkcontact" type="checkbox">
+            
+                    <form action="" method="post" class="contactform">
+                        <p class="input_wrapper"><input type="text" name="contact_nom" value=""  id ="contact_nom"><label for="contact_nom">NAME</label></p>
+                        <p class="input_wrapper"><input type="text" name="contact_email" value=""  id ="contact_email"><label for="contact_email">EMAIL</label></p>
+                        <p class="input_wrapper"><input type="text" name="contact_sujet" value=""  id ="contact_sujet"><label for="contact_sujet">SUBJECT</label></p>
+                        <p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea></p>
+                        <p class="submit_wrapper"><input type="submit" value="SEND"></p>			
+                    </form>
+            </article>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer id="Contact">
+
+        <div id="infor">
+            <h3>MahuTech</h3>
+            <p>Chuyên gia công phần mềm</p>
+            <div id="our_social_network">
+                <a class="fa fa-facebook" aria-hidden="true"></a>
+                <a class="fa fa-youtube" aria-hidden="true"></a>
+                <a class="fa fa-linkedin" aria-hidden="true"></a>
+                <a>M</a>
+            </div>
+            <div>Số Điện Thoại: 0123456789</div>
+            <div>Địa chỉ: Hồ Tùng Mậu, Hà Nội, Việt Nam</div>
+        </div>
+        <div id="about">
+            <div id="about_us">
+                <h3>Về chúng tôi</h3>
+                <a >Giới thiệu</a><br>
+                <a >Chính sách bảo mật</a><br>
+                <a >Điều khoản dịch vụ</a>
+            </div>
+            <div id="comunity">
+                <h3>Cộng đồng</h3>
+                <a href="">PCP Team</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
